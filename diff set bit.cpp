@@ -2,6 +2,10 @@
 using namespace std;
 
 int diffsetbit(int m,int n){
+  if(m==n){
+    return -1;
+  }
+  else{
   int c=1;  
 for(int j=0;j<32;j++){
     if(!((m^n)&(1<<j))){
@@ -11,6 +15,7 @@ for(int j=0;j<32;j++){
     break;
 }
 return c;
+}
 }
 int main(){
 int m,n;
